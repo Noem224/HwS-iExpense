@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct ExpenseItem: Identifiable {
+struct ExpenseItem: Identifiable, Codable {
     var id = UUID()
     
     let name: String
-    let type: String
+    let type: ExpenseType
     let amount: Double
+    
+    enum ExpenseType: String, Codable, CaseIterable {
+        case personal = "Personal"
+        case business = "Business"
+    }
 }
+
