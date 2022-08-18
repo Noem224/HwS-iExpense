@@ -15,8 +15,6 @@ struct AddExpenseView: View {
     @State private var type: ExpenseItem.ExpenseType = .personal
     @State private var amount = 0.0
     
-    
-    
     let types = ["Business","Personal"]
     var body: some View {
         NavigationView {

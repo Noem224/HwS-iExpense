@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var expenses = Expenses()
     @State private var showingAddExpense = false
-        
+    
     var body: some View {
         NavigationView {
             List {
@@ -22,6 +22,7 @@ struct ContentView: View {
                                     Text(item.name)
                                         .font(.headline)
                                     Text(item.type.rawValue)
+                                        .foregroundColor(.secondary)
                                 }
                                 Spacer()
                                 Text(item.amount, format: .currency(code: "USD"))
